@@ -1,11 +1,11 @@
 # favorite_languages.py
 
-favorite_languages = {
-'jen': 'python',
-'sarah': 'c',
-'edward': 'ruby',
-'phil': 'python',
-} 
+# favorite_languages = {
+# 'jen': 'python',
+# 'sarah': 'c',
+# 'edward': 'ruby',
+# 'phil': 'python',
+# } 
 # print(favorite_languages)
 # language = favorite_languages['sarah'].title()
 # print(f"Sarah's favorite language is {language}.")
@@ -44,9 +44,29 @@ favorite_languages = {
 # for language in favorite_languages.values():
 #     print(language.title())
 
-setofvalues = set(favorite_languages.values())
-print(setofvalues)
-print(type(setofvalues))
-print("The following languages have been mentioned:")
-for language in set(favorite_languages.values()):
-    print(language.title())
+# setofvalues = set(favorite_languages.values())
+# print(setofvalues)
+# print(type(setofvalues))
+# print("The following languages have been mentioned:")
+# for language in set(favorite_languages.values()):
+#     print(language.title()) 
+
+favorite_languages = {
+                    'jen': ['python', 'ruby'],
+                    'sarah': ['c'],
+                    'edward': ['ruby', 'go'],
+                    'phil': ['python', 'haskell'],
+                    }
+for name, languages in favorite_languages.items():
+    # print(f"\n{name.title()}'s favorite languages are:")
+    mesg = f"\n{name.title()}'s favorite language"
+    if len(languages) > 1:
+        mesg += 's are:'
+    else:
+        mesg += ' is:'
+    print(mesg)
+    for language in languages:
+        print(f"\t{language.title()}") 
+
+
+
