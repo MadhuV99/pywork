@@ -1,24 +1,36 @@
 #favorite_numbers.py 
 
+# favorite_numbers = {
+#     'mandy': 42,
+#     'micah': 23,
+#     'gus': 7,
+#     'hank': 1000_000,
+#     'maggie': 0,
+#     }
+
+# num = favorite_numbers['mandy']
+# print(f"Mandy's favorite number is {num}.")
+
+# num = favorite_numbers['micah']
+# print(f"Micah's favorite number is {num}.")
+
+# num = favorite_numbers['gus']
+# print(f"Gus's favorite number is {num}.")
+
+# num = favorite_numbers['hank']
+# print(f"Hank's favorite number is {num}.")
+
+# num = favorite_numbers['maggie']
+# print(f"Maggie's favorite number is {num}.")
+
 favorite_numbers = {
-    'mandy': 42,
-    'micah': 23,
-    'gus': 7,
-    'hank': 1000_000,
-    'maggie': 0,
+    'mandy': [42, 17],
+    'micah': [42, 39, 56],
+    'gus': [7, 12],
     }
 
-num = favorite_numbers['mandy']
-print(f"Mandy's favorite number is {num}.")
-
-num = favorite_numbers['micah']
-print(f"Micah's favorite number is {num}.")
-
-num = favorite_numbers['gus']
-print(f"Gus's favorite number is {num}.")
-
-num = favorite_numbers['hank']
-print(f"Hank's favorite number is {num}.")
-
-num = favorite_numbers['maggie']
-print(f"Maggie's favorite number is {num}.")
+for name, numbers in favorite_numbers.items():
+    print(f"\n{name.title()} likes the following numbers:")
+    for number in numbers:
+        print(f"  {number}")
+        
